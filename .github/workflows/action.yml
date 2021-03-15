@@ -11,11 +11,10 @@ jobs:
   bot:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/set-timezone-action@v1.1
+      - name: Setup timezone
+        uses: zcong1993/setup-timezone@master
         with:
-          timezoneLinux: "Asia/Singapore"
-          timezoneMacos: "Asia/Singapore"
-          timezoneWindows: "Singapore Standard Time"
+          timezone: Asia/Singapore
       - uses: actions/checkout@v1
       - name: "Install node"
         uses: actions/setup-node@v1
