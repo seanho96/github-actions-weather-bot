@@ -5,16 +5,12 @@ on:
     branches:
       - master
   schedule:
-    - cron: '0 08 * * *'
+    - cron: '0 00 * * *'
 
 jobs:
   bot:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup timezone
-        uses: zcong1993/setup-timezone@master
-        with:
-          timezone: Asia/Singapore
       - uses: actions/checkout@v1
       - name: "Install node"
         uses: actions/setup-node@v1
