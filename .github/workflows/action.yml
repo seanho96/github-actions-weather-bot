@@ -1,11 +1,11 @@
-name: 'Github Actions Weather Bot'
+name: "Github Actions Weather Bot"
 
 on:
   push:
     branches:
       - master
   schedule:
-    - cron: '0 00 * * *'
+    - cron: "0 23 * * *"
 
 jobs:
   bot:
